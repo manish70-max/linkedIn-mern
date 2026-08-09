@@ -9,7 +9,7 @@ import { RxCrossCircled } from "react-icons/rx";
 import io from "socket.io-client"
 
 
-const socket = io("https://linkedin-backend-hmp7.onrender.com");
+const socket = io("https://linkedin-backend-hmp7.onrender.com/socket.io/");
 function Network() {
 let {serverUrl}=useContext(authDataContext)
 let [connections,setConnections]=useState([])
