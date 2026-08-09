@@ -9,7 +9,8 @@ import postRouter from "./routes/post.routes.js";
 import connectionRouter from "./routes/connection.routes.js";
 import http from "http";
 import { Server } from "socket.io";
-import notificationRouter from "https://linkedin-gjvg.onrender.com";
+
+import notificationRouter from "./routes/notification.routes.js";
 import dns from "dns";
 
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
