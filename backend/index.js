@@ -31,7 +31,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://linkedin-gjvg.onrender.com",
     credentials: true,
   })
 );
