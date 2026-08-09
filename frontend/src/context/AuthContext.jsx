@@ -1,7 +1,7 @@
 import React, { createContext } from 'react'
 export const authDataContext=createContext()
 function AuthContext({children}) {
-const serverUrl="https://linkedin-max.onrender.com"
+const serverUrl="https://linkedin-backend-hmp7.onrender.com"
     let value={
         serverUrl
     }
