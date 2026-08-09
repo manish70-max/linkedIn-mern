@@ -19,15 +19,30 @@ let [searchInput,setSearchInput]=useState("")
 let [searchData,setSearchData]=useState([])
 
 
-const handleSearch=async ()=>{
-try {
-  let result=await axios.get(`${serverUrl}/api/user/search?query=${searchInput}`,{withCredentials:true})
-setSearchData(result.data)
-} catch (error) {
-  setSearchData([])
-  console.log(error)
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
 const handleSearch = async () => {
   const query = searchInput.trim();
 
