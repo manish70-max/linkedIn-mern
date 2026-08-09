@@ -18,58 +18,28 @@ let {serverUrl}=useContext(authDataContext)
 let [searchInput,setSearchInput]=useState("")
 let [searchData,setSearchData]=useState([])
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-const handleSearch = async () => {
-  const query = searchInput.trim();
-
-  // Empty search par API call nahi hogi
-  if (!query) {
-    setSearchData([]);
-    return;
-  }
-
+const handleSignOut = async () => {
   try {
     const result = await axios.get(
-      `${serverUrl}/api/user/search?query=${encodeURIComponent(query)}`,
+      serverUrl + "/api/auth/logout",
       {
         withCredentials: true,
       }
     );
 
-    setSearchData(result.data);
+    setUserData(null);
+    navigate("/login");
+
+    console.log(result);
   } catch (error) {
-    setSearchData([]);
-    console.log(error.response?.data || error.message);
+    console.log(error);
   }
 };
 
 useEffect(() => {
   handleSearch();
 }, [searchInput]);
+
   return (
     <div className='w-full h-[80px] bg-[white] fixed top-0 shadow-lg flex justify-between md:justify-around items-center px-[10px] left-0 z-[80]'>
         <div className='flex justify-center items-center gap-[10px] '>
